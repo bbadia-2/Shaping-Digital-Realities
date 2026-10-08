@@ -1,0 +1,144 @@
+:root {
+  --orange: #fcb782;
+  --light-orange: #faefe3;
+  --electric-orange: #fe6e06;
+  --dark-grey: #333333;
+  --white: #ffffff;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+.Hero {
+  width: 1440px;
+  padding: 64px;
+
+  background-image:
+    url("../images/shape.png"),
+    linear-gradient(var(--orange) 875px, var(--white) 875px);
+
+  background-repeat: no-repeat;
+  background-position:
+    left 795px top 64px,
+    left top;
+  background-size:
+    581px 794px,
+    100% 100%;
+}
+
+.container {
+  display: flex;
+  gap: 0;
+  width: 1312px;
+}
+
+.column {
+  flex: 1;
+}
+
+.hero-image {
+  margin-top: 71px;
+}
+
+/* Title and badge */
+.heading-box {
+  margin-top: 76px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.badge .text-badge {
+  transform-origin: center;
+  animation: rotate linear 5s infinite;
+}
+
+.heading-box h1 {
+  margin: 0;
+  color: var(--white);
+  font-family: "Times New Roman", Times, serif;
+  font-size: 112px;
+  font-weight: 400;
+  line-height: 108px;
+}
+
+/* Main paragraph */
+.hero_description {
+  margin: 40px 0 0;
+  color: var(--white);
+  font-size: 24px;
+  font-weight: 400;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  gap: 16px;
+}
+
+.card {
+  flex: 0 0 209px;
+  min-width: 0;
+  background-color: var(--light-orange);
+  padding: 20px;
+  border-radius: 24px;
+}
+
+.heading_card {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.heading_card h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.card p {
+  margin: 12px 0 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 300;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Button */
+.column a {
+  color: var(--white);
+  display: inline-block;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  background-color: var(--electric-orange);
+  border-radius: 40px;
+  padding: 24px 40px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  transition: 0.5s all;
+}
+.column a:hover {
+  background-color: var(--dark-grey);
+  transform: scale(1.1);
+}
+
+.heading_card i {
+  color: var(--orange);
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
