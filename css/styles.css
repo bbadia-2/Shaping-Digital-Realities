@@ -11,22 +11,17 @@
 
 body {
   margin: 0;
+  padding: 0;
 }
 .Hero {
-  width: 1440px;
+  width: 100%;
   padding: 64px;
 
-  background-image:
-    url("../images/shape.png"),
-    linear-gradient(var(--orange) 875px, var(--white) 875px);
-
-  background-repeat: no-repeat;
-  background-position:
-    left 795px top 64px,
-    left top;
-  background-size:
-    581px 794px,
-    100% 100%;
+  background-image: linear-gradient(
+    to bottom,
+    var(--orange) 875px,
+    var(--white) 875px
+  );
 }
 
 .container {
@@ -37,6 +32,7 @@ body {
 
 .column {
   flex: 1;
+  position: relative;
 }
 
 .hero-image {
@@ -132,6 +128,24 @@ body {
 
 .heading_card i {
   color: var(--orange);
+}
+
+.shape {
+  position: absolute;
+  right: 0;
+  border-radius: 0 0 400px 400px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.04) 0.02%,
+    rgba(255, 255, 255, 0.72) 106.27%
+  );
+  width: 580px;
+  height: 798px;
+  z-index: 0;
+}
+.hero-image {
+  position: relative;
+  z-index: 1;
 }
 
 @keyframes rotate {
